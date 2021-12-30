@@ -10,8 +10,9 @@
           v-for="(pokemon, index) in filteredPokemon"
           :key="index"
           >
-          {{ pokemon.name }}
-
+          <router-link :to="`/about/${urlId[pokemon.name]}`">
+            {{ pokemon.name }}
+          </router-link>
         </div>
       </div>
     </div>
