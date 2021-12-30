@@ -1,11 +1,11 @@
 <template>
-  <div class="flex justify-center bg-blue-500">
+  <div class="flex justify-center">
     <div class="w-2/4 flex flex-col justify-center items-center border-4 border-yellow-500">
-      <div class="bg-red-500 w-full flex justify-center">
+      <div class="w-full flex justify-center">
         <input type="text" placeholder="Enter Pokemon here..." class="outline-none mt-10 p-2 border-2 border-blue-500"
           v-model="text">
       </div>
-      <div class="mt-10 p-4 flex flex-wrap justify-center bg-green-500">
+      <div class="mt-10 p-4 flex flex-wrap justify-center">
         <div class="ml-4 text-2xl text-blue-200"
           v-for="(pokemon, index) in filteredPokemon"
           :key="index"
