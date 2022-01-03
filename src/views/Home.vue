@@ -1,8 +1,8 @@
 <template>
   <div class="flex justify-center">
-    <div class="w-2/4 flex flex-col justify-center items-center border-4 border-yellow-500">
+    <div class="w-2/4 flex flex-col justify-center items-center border-4 border-yellow-400 rounded-xl">
       <div class="w-full flex justify-center">
-        <input type="text" placeholder="Enter Pokemon here..." class="outline-none mt-10 p-2 border-2 border-blue-500"
+        <input type="text" placeholder="Enter Pokemon here..." class="outline-none mt-10 p-2 border-2 border-blue-500 rounded-xl"
           v-model="text">
       </div>
       <div class="mt-10 p-4 flex flex-wrap justify-center">

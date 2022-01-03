@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="flex justify-center">
     <div
       v-if="pokemon"
       class="
@@ -10,41 +10,42 @@
         shadow-2xl
         flex flex-col
         justify-center
+        rounded-xl
       "
     >
-      <h3 class="text-2xl font-bold text-center text-green-900 uppercase">
+      <h3 class="text-2xl mt-4 font-bold text-center uppercase">
         {{ pokemon.name }}
       </h3>
-      <div class="flex justify-center">
+      <div class="flex justify-around">
         <img :src="pokemon.sprites.front_default" class="w-48" />
         <img :src="pokemon.sprites.back_default" class="w-48" />
       </div>
-      <div class="flex flex-col justify-center items-center bg-green-100">
+      <div class="flex flex-col justify-center items-center bg-purple-200 rounded-b-xl">
         <div>
-          <h3 class="text-center text-yellow-400">Type</h3>
+          <h3 class="text-center font-bold mt-4">Type</h3>
           <div class="" v-for="(type, index) in pokemon.types" :key="index">
-            <h5 class="text-red-500">{{ type.type.name }}</h5>
+            <h5 class="text-center">{{ type.type.name }}</h5>
           </div>
         </div>
-        <div class="w-2/6">
-          <h3 class="text-center">abilities</h3>
+        <div class="w-2/6 flex flex-col items-center">
+          <h3 class="text-center font-bold mt-4">Abilities</h3>
           <div
-            class="flex items-center"
+            class=""
             v-for="(ability, index) in pokemon.abilities"
             :key="index"
           >
-            <h5 class="text-red-500">{{ ability.ability.name }}</h5>
+            <h5 class="text-center">{{ ability.ability.name }}</h5>
           </div>
         </div>
         <div class="w-2/6">
-          <h3 class="text-center">stats</h3>
+          <h3 class="text-center mt-4 font-bold">Stats</h3>
           <div
-            class="flex justify-between bg-blue-200"
+            class="flex justify-between"
             v-for="(stat, index) in pokemon.stats"
             :key="index"
           >
-            <h5 class="text-red-800 text-left">{{ stat.stat.name }}</h5>
-            <h5 class="text-red-500 text-right">{{ stat.base_stat }}</h5>
+            <h5 class="text-left">{{ stat.stat.name }}</h5>
+            <h5 class="text-right">{{ stat.base_stat }}</h5>
           </div>
         </div>
       </div>
